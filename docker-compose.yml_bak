@@ -1,0 +1,44 @@
+
+version: "3"
+
+services:
+  webserver:
+    image: mamat08nurahmat/lamp_web:v1
+    container_name: 'mat-webserver'
+    restart: 'always'
+    ports:
+      - "80:80"
+      - "443:443"
+    links:
+      - mysql
+    volumes:
+      - ${DOCUMENT_ROOT-./www}:/var/www/html
+      - ${PHP_INI-./config/php/php.ini}:/usr/local/etc/php/php.ini
+      - ${VHOSTS_DIR-./config/vhosts}:/etc/apache2/sites-enabled
+      - ${LOG_DIR-./logs/apache2}:/var/log/apache2
+  mysql:
+    image: mamat08nurahmat/mysql:v1
+    container_name: 'mat-mysql'
+    restart: 'always'
+    ports:
+      - "3306:3306"
+    volumes:
+      - ${MYSQL_DATA_DIR-./data/mysql}:/var/lib/mysql
+      - ${MYSQL_LOG_DIR-./logs/mysql}:/var/log/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: tiger
+      MYSQL_DATABASE: mat
+      MYSQL_USER: mat
+      MYSQL_PASSWORD: mat
+  phpmyadmin:
+    image: mamat08nurahmat/phpmyadmin:v1
+    container_name: 'mat-phpmyadmin'
+    links:
+      - mysql
+    environment:
+      PMA_HOST: mysql
+      PMA_PORT: 3306
+    ports:
+      - '8080:80'
+    volumes:
+      - /sessions
