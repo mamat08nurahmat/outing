@@ -1,0 +1,16 @@
+version: '3.1'
+
+services:
+
+  mat-webserver:
+    image: mamat08nurahmat/bni_inacraft
+    restart: always
+    ports:
+      - 8888:80
+    environment:
+      WORDPRESS_DB_HOST: mariadb001.cmeypdk92ow4.us-west-2.rds.amazonaws.com
+      WORDPRESS_DB_USER: root
+      WORDPRESS_DB_PASSWORD: mamat123
+      WORDPRESS_DB_NAME: kuesioner
+    volumes: 
+      - ${PWD}:/var/www/html

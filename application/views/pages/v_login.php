@@ -20,7 +20,7 @@
         <div class="animate form login_form">
           <section class="login_content">
            <form class="form-signin" action="<?= site_url('login/cek_login')?>" method="post">  
-              <h1>Login Form</h1>
+              <h1>BNI INACRAFT 2019</h1>
               <div>
                 <input type="text" class="form-control" name="npp" placeholder="NPP" required="" />
               </div>

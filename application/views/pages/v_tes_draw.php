@@ -61,18 +61,22 @@
 <body>
     <!-- <button id="myBtn">Try it</button>     -->
 <center>
-    <div id="chart"></div>
+    <!-- 
     <div id="selamat">
-    <!-- <div id="nama_hadiah">XXXXXXXXXXXXXXXXXXXXX</div> -->
-    <div id="question"><h2></h2><h1></h1></div>  
+
+    <div id="question"><h2></h2><h1></h1></div>   -->
+    <div id="question">
+<h2>UNDIAN HADIAH</h2>
+    <h1></h1>
+    </div>  
+
 <form action="<?=site_url('/quiz/submit_draw')?>" method="POST">
     <!-- INPUT kd hadiah type=hidden -->
-	<p><input type="hidden"   name="kd_kuesioner" id="kd_kuesioner" value="<?=$kd_kuesioner?>" ></p>
-	<p><input type="hidden"   name="kd_hadiah" id="kd_hadiah" ></p>
-
-
+	<input type="hidden"   name="kd_kuesioner" id="kd_kuesioner" value="<?=$kd_kuesioner?>" >
+	<input type="hidden"   name="kd_hadiah" id="kd_hadiah" >
     <button type="submit" id="finish">FINISH</button>
 </form>
+    <div id="chart"></div>
 </center>
 
 
@@ -169,11 +173,11 @@
                 return;
             }
             var  ps       = 360/data.length,
-                 pieslice = Math.round(1440/data.length),
-                 rng      = Math.floor((Math.random() * 1440) + 360);
+                 pieslice = Math.round(999999/data.length),
+                 rng      = Math.floor((Math.random() * 999999) + 360);
                 
-            //      rotation = (Math.round(rng / ps) * ps);
-                 rotation = 999999;
+                 rotation = (Math.round(rng / ps) * ps);
+//                 rotation = 999999;
             
             picked = Math.round(data.length - (rotation % 360)/ps);
             picked = picked >= data.length ? (picked % data.length) : picked;
