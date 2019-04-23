@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Login Page</title>
+    <title>BNI INACRAFT 2019</title>
 <link href="<?php echo base_url();?>asset/login/bootstrap.min.css" rel="stylesheet">
 <link href="<?php echo base_url();?>asset/login/custom.min.css" rel="stylesheet">
   
@@ -20,7 +20,7 @@
         <div class="animate form login_form">
           <section class="login_content">
            <form class="form-signin" action="<?= site_url('login/cek_login')?>" method="post">  
-              <h1>BNI INACRAFT 2019</h1>
+              <h1>LOGIN BNI INACRAFT 2019</h1>
               <div>
                 <input type="text" class="form-control" name="npp" placeholder="NPP" required="" />
               </div>

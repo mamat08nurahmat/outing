@@ -15,14 +15,11 @@
 <div class="container">
 
 
-					<h1 class="text-info" style="text-align: center">Kuesioner</h1><br>
+					<h1 class="text-info" style="text-align: center">BNI INACRAFT 2019</h1><br>
 						<center>
                             <img src="<?php echo base_url();?>asset/img/logo.png" height="250" width="400">
 						</center>		
 <!---
--->
-
-
 <table class="table table-bordered table-striped">
     <thead>
     <tr>
@@ -50,5 +47,8 @@
 
     </tbody>
 </table>                       
+-->
+
+
 
 </div>
