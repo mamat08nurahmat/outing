@@ -98,9 +98,9 @@ $db['default'] = array(
 
 $db['default'] = array(
 	'dsn'	=> '',
-    'hostname' => 'ec2-35-163-208-30.us-west-2.compute.amazonaws.com',
+        'hostname' => 'mariadb001.cmeypdk92ow4.us-west-2.rds.amazonaws.com',
 	'username' => 'root',
-	'password' => 'tiger',
+	'password' => 'mamat123',
 	'database' => 'kuesioner',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
