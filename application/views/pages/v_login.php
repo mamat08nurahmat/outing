@@ -21,7 +21,7 @@
           <section class="login_content">
            <form class="form-signin" action="<?= site_url('login/cek_login')?>" method="post">  
               <h1>LOGIN BNI INACRAFT 2019</h1>
-              <h1>XXXXXXXXXXXXXXXXXXXXXXXXXXXX</h1>
+              <h1>TESS JENKINS</h1>
               <div>
                 <input type="text" class="form-control" name="npp" placeholder="NPP" required="" />
               </div>
